@@ -96,6 +96,6 @@ uint16_t ma_api_rain_sensor_average_percentage_value(uint8_t in_timesOfAverage)
        sumValueAdc += ma_api_rain_sensor_adc_value(); // Somar o valor do ADC
     }
     uint16_t averageValueAdc = sumValueAdc / in_timesOfAverage; // Calcular a média
-    return map(averageValueAdc, 0, ESP_32_ADC_VALUE_MAX, 0, 100);
+    return map(averageValueAdc, ESP_32_ADC_VALUE_MAX, 0, 0, 100);
 }
 /*****************************END OF FILE**************************************/
